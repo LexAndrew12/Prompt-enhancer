@@ -1,0 +1,9 @@
+{
+    "python.analysis.extraPaths": ["./backend"],
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    },
+    "python.defaultInterpreterPath": "${workspaceFolder}/backend/venv/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true
+}

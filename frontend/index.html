@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Optimalizáló</title>
+    <base href="/">  <!-- Fix relative paths -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Optional: Add real favicon -->
+    <link rel="icon" href="data:,"> <!-- Disables favicon request -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Input Section (Stays Fixed) -->
+        <div class="input-section">
+            <h1><i class="fas fa-robot"></i> AI Prompt Optimalizáló</h1>
+            <form id="prompt-form">
+                <textarea 
+                    id="prompt-input" 
+                    placeholder="Írd ide a kezdeti promptod..."
+                ></textarea>
+                <div class="controls">
+                    <button type="button" onclick="analyzePrompt()">
+                        <i class="fas fa-search"></i> Elemzés
+                    </button>
+                    <button type="button" onclick="optimizePrompt()">
+                        <i class="fas fa-magic"></i> Optimalizálás
+                    </button>
+                    <span id="char-count">0/500</span>
+                </div>
+            </form>
+        </div>
+
+        <!-- Simplified Results Container -->
+        <div class="result-container">
+            <!-- Analysis Panel -->
+            <div class="collapsible-panel">
+                <h3><i class="fas fa-microscope"></i> Elemzés Eredményei</h3>
+                <div class="panel-content" id="analysis-panel">
+                    <div id="suggestions"></div>
+                </div>
+            </div>
+
+            <!-- Optimized Prompt Panel -->
+            <div class="collapsible-panel">
+                <h3><i class="fas fa-sparkles"></i> Optimalizált Prompt</h3>
+                <div class="panel-content" id="optimized-panel">
+                    <div id="optimized-prompt"></div>
+                    <button onclick="copyPrompt()" class="copy-btn">
+                        <i class="fas fa-copy"></i> Másolás
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
